@@ -18,20 +18,28 @@ git clone https://github.com/marcreinan/myusers_fullstac.git
 Escolha uma das pastas(myusers_crawler, myusers_backend ou myusers_frontend) para instalar as dependencias e rodar o projeto, digite os comandos abaixo: 
 ```bash
 npm install
-npm start
+npm start ou npm run dev
 ```
-!É explicitamente necessário criar os arquivos .env nas pastas raiz do crawler e do backend, em seguida configurar as váriavéis de ambientes(process.env | arquivo .env na raiz dos projetos) para a correta execução dos arquivos, cada diretório tem seu arquivo .env.example mostrando quais as váriáveis necessitam ser declaradas e configuradas!
+
+### Projeto em beta-teste
+
+!PARA RODAR O PROJETO LOCAL(modo dev: npm run dev) É explicitamente necessário criar os arquivos .env nas pastas raiz do crawler e do backend,renomei os arquivos.env.example para .env  em seguida configure as váriavéis de ambientes nos arquivos, para a correta execução dos projeto. 
+
+exemplo de config para rodar em modo dev
 
 .env do backend
 PORT=3030
 URL_API=https://reqres.in/api
+NODE_ENV=development
 
 .env do crawler
 URL_API=http://localhost:3030/api/v1/
 URL_CRAWLER=https://reqres.in/api/users/
 PORT=5000
-TTL=4000 //tempo entre as requisições
+TTL=4000 //tempo entcdre as requisições
+NODE_ENV=development
 
+Para rodar em produção é necessário configurar as mesmas váriaveis em seu host de deploy
 
 Para iniciar com um banco de dados sem registros base, delete o arquivo ```db.sqlite3``` dentro da pasta ```api/v1``` depois rode as migrates do knex utilizando o comando:
 ```bash
