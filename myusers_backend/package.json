@@ -1,0 +1,26 @@
+{
+  "name": "myusers_backend",
+  "version": "1.0.0",
+  "description": "Teste de backend Anestech - API Tasks",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -r dotenv-safe/config src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marc Reinan Gomes Dantas do Nascimento",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "moment": "^2.27.0",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
