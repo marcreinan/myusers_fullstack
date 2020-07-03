@@ -22,6 +22,17 @@ npm start
 ```
 !É explicitamente necessário criar os arquivos .env nas pastas raiz do crawler e do backend, em seguida configurar as váriavéis de ambientes(process.env | arquivo .env na raiz dos projetos) para a correta execução dos arquivos, cada diretório tem seu arquivo .env.example mostrando quais as váriáveis necessitam ser declaradas e configuradas!
 
+.env do backend
+PORT=3030
+URL_API=https://reqres.in/api
+
+.env do crawler
+URL_API=http://localhost:3030/api/v1/
+URL_CRAWLER=https://reqres.in/api/users/
+PORT=5000
+TTL=4000 //tempo entre as requisições
+
+
 Para iniciar com um banco de dados sem registros base, delete o arquivo ```db.sqlite3``` dentro da pasta ```api/v1``` depois rode as migrates do knex utilizando o comando:
 ```bash
 npx knex migrate:latest
